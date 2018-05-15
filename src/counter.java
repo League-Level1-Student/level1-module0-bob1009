@@ -25,12 +25,17 @@ public class counter implements ActionListener{
 	window.setVisible(true);
 	window.pack();
 	incbutton.addActionListener(this);
+	dispbutton.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		System.out.println("mysoul is dead");
-	}
-
+		JButton j==(JButton)arg0.setSource();
+		if (j==incbutton) {
+			System.out.println("incbutton");
+		}else if (j==dispbutton) {
+			System.out.println("dispbutton");
+		}
+			
+		}
 }
