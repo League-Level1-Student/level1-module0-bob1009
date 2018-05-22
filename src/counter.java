@@ -10,10 +10,11 @@ public class counter implements ActionListener{
 	JPanel panel = new JPanel();
 	JButton incbutton = new JButton("increase");
 	JButton dispbutton= new JButton("display");
-	static counter c = new counter();
+	int counter = 0;
 
 	
 	public static void main(String[] args) {
+		counter c=new counter();
 		c.buildwindow();
 
 	}
@@ -30,11 +31,11 @@ public class counter implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		JButton j==(JButton)arg0.setSource();
+		JButton j=(JButton)arg0.getSource();
 		if (j==incbutton) {
-			System.out.println("incbutton");
+			counter=counter +1;
 		}else if (j==dispbutton) {
-			System.out.println("dispbutton");
+			System.out.println(counter);
 		}
 			
 		}
